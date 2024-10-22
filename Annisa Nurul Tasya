@@ -1,0 +1,33 @@
+class Hewan {
+  // 2 fields
+  String jenis;
+  int umur;
+
+  // Constructor dengan this keyword
+  Hewan(this.jenis, this.umur);
+
+  // Method pertama dengan 3 fields
+  void deskripsi(String habitat, double berat, bool karnivora) {
+    print('Jenis Hewan: $jenis');
+    print('Umur: $umur tahun');
+    print('Habitat: $habitat');
+    print('Berat: $berat kg');
+    print('Karnivora: $karnivora');
+  }
+
+  // Method kedua dengan 3 fields
+  void updateHewan(String jenisBaru, int umurBaru, String kondisi) {
+    this.jenis = jenisBaru;
+    this.umur = umurBaru;
+    print('Jenis Hewan Terbaru: $jenis');
+    print('Umur Terbaru: $umur tahun');
+    print('Kondisi: $kondisi');
+  }
+}
+
+void main() {
+  // Contoh penggunaan class
+  Hewan harimau = Hewan('Harimau', 5);
+  harimau.deskripsi('Hutan', 200.5, true);
+  harimau.updateHewan('Singa', 4, 'Sehat');
+}
